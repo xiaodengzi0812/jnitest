@@ -11,20 +11,22 @@ public class DzParcel {
         this.mNativePtr = nativeCreate();
     }
 
-    // 写入数据
+    // 写入int数据
     public final void writeInt(int val) {
         nativeWriteInt(mNativePtr, val);
     }
 
-    // 读取数据
+    // 读取int数据
     public final int readInt() {
         return nativeReadInt(mNativePtr);
     }
 
+    // 写入String数据
     public final void writeString(String str) {
         nativeWriteString(mNativePtr, str);
     }
 
+    // 读取String数据
     public final String readString() {
         return nativeReadString(mNativePtr);
     }

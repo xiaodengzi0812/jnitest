@@ -13,15 +13,15 @@ public class JniTest4 {
     @Test
     public void createUserBean() {
         DzParcel parcel = new DzParcel();
-        parcel.writeString("dengzi and feifei");
         parcel.writeInt(16);
         parcel.writeInt(30);
+        parcel.writeString("dengzi and feifei");
 
         parcel.setDataPos(0);
 
-        String val3 = parcel.readString();
         int val = parcel.readInt();
         int val2 = parcel.readInt();
+        String val3 = parcel.readString();
         Log.e("dengzi", "val = " + val);
         Log.e("dengzi", "val2 = " + val2);
         Log.e("dengzi", "val3 = " + val3);
